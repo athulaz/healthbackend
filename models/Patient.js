@@ -15,6 +15,10 @@ const PatientSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  treatments: {
+    type: [String], // Array of treatments
+    required: true,
+  },
   medicalHistory: {
     type: [String], // Array of strings (e.g., ["Hypertension", "Diabetes"])
     required: true,
