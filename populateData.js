@@ -89,6 +89,7 @@ const insertAuthorizations = async (patients) => {
       diagnosisCode: 'I10',
       notes: 'Immediate medication approval required',
       status: 'pending',
+      dateOfService: new Date('2024-11-15'), 
     },
     {
       patientId: patients[1]._id,
@@ -97,6 +98,7 @@ const insertAuthorizations = async (patients) => {
       diagnosisCode: 'E11',
       notes: 'Surgery scheduled for next week',
       status: 'approved',
+      dateOfService: new Date('2024-12-01'), 
     },
     {
       patientId: patients[2]._id,
@@ -105,6 +107,7 @@ const insertAuthorizations = async (patients) => {
       diagnosisCode: 'N18',
       notes: 'Dialysis scheduled for next month',
       status: 'approved',
+      dateOfService: new Date('2025-01-10'), 
     },
     {
       patientId: patients[3]._id,
@@ -113,6 +116,7 @@ const insertAuthorizations = async (patients) => {
       diagnosisCode: 'F33',
       notes: 'Weekly therapy sessions required',
       status: 'pending',
+      dateOfService: new Date('2024-11-25'), 
     },
     {
       patientId: patients[4]._id,
@@ -121,6 +125,7 @@ const insertAuthorizations = async (patients) => {
       diagnosisCode: 'J44',
       notes: 'New medication prescribed for COPD',
       status: 'approved',
+      dateOfService: new Date('2024-12-05'), 
     },
     {
       patientId: patients[5]._id,
@@ -129,6 +134,7 @@ const insertAuthorizations = async (patients) => {
       diagnosisCode: 'C50',
       notes: 'Chemotherapy scheduled for next month',
       status: 'pending',
+      dateOfService: new Date('2025-01-15'), 
     }
   ];
 

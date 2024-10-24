@@ -29,6 +29,10 @@ const AuthorizationSchema = new mongoose.Schema({
     enum: ['pending', 'approved', 'denied'],
     default: 'pending',
   },
+  dateOfService: {  
+    type: Date,
+    required: true,
+  },
   createdAt: {
     type: Date,
     default: Date.now,

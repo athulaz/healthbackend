@@ -26,12 +26,5 @@ router.get('/', authMiddleware, getAuthorizations);
 // Route to submit an authorization request (already done)
 router.post('/', authMiddleware, submitAuthorization);
 
-
-
-
-
-
 module.exports = router;
 
-
-module.exports = router;
