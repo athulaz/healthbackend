@@ -29,15 +29,26 @@ exports.getAuthorizationById = async (req, res) => {
 
 // Create a new authorization
 exports.createAuthorization = async (req, res) => {
-  const { patientId, treatmentType, insurancePlan, diagnosisCode, notes } = req.body;
+  const { patientId, treatmentType, insurancePlan, dateOfService, diagnosisCode, notes } = req.body;
+
+  // Check if dateOfService is present
+  if (!dateOfService) {
+    return res.status(400).json({ message: 'dateOfService is required' });
+  }
 
   try {
+    const parsedDate = new Date(dateOfService);
+    if (isNaN(parsedDate)) {
+      return res.status(400).json({ message: 'Invalid date format' });
+    }
+
     const newAuthorization = new Authorization({
       patientId,
       treatmentType,
       insurancePlan,
       diagnosisCode,
       notes,
+      dateOfService: parsedDate,
       status: 'pending',
     });
 
@@ -134,4 +145,3 @@ exports.updateAuthorizationStatus = async (req, res) => {
     }
   };
   
-
